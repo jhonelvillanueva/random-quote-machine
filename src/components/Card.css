@@ -1,25 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@1,300&family=Cookie&family=Duru+Sans&display=swap');
 
+.card-container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
 .card {
-	max-height: 100%;
-	border: 1px solid black;
+	box-shadow: 0 0 18px rgba(0, 0, 0, 0.379);
 	font-size: 2.4rem;
 	margin: 1.5rem;
 	border-radius: 5px;
+	overflow: hidden;
+	background-color: white;
+	max-height: 50rem;
 }
 
 .quote-container {
 	margin: 2rem;
-	display: flex;
-	flex-direction: column;
+	overflow: scroll;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+
+.quote-container::-webkit-scrollbar {
+	width: 0;
+	height: 0;
 }
 
 .quote {
-	display: inline-block;
 	font-family: 'Cookie', cursive;
 	font-size: 3.2rem;
 	line-height: 3.2rem;
 	text-align: center;
+	max-height: 36rem;
 }
 
 .icon {
@@ -31,7 +48,7 @@
 	font-family: 'Alegreya Sans', sans-serif;
 	font-size: 2rem;
 	text-align: right;
-	margin-top: 2rem;
+	margin-top: 1rem;
 }
 
 .footer {
@@ -41,6 +58,40 @@
 }
 
 .btn {
+	font-family: 'Duru Sans', sans-serif;
 	cursor: pointer;
 	padding: 1rem;
+	border: none;
+	border-radius: 5px;
+	color: white;
+}
+
+.btn:hover {
+	opacity: 0.9;
+}
+
+.coder {
+	font-size: 1.5rem;
+	font-family: 'Duru Sans', sans-serif;
+	color: white;
+}
+
+@media screen and (max-width: 740px) {
+	.card {
+		max-width: 50rem;
+	}
+}
+
+@media screen and (min-width: 741px) {
+	.card {
+		max-width: 70rem;
+	}
+
+	.quote-container {
+		margin: 5rem 2rem;
+	}
+
+	.btn {
+		padding: 1.5rem;
+	}
 }
